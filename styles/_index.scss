@@ -1,9 +1,14 @@
 // ----------------------- INDEX PAGE -----------------------
 .cover {
     background-image: url("/static/images/background-index.png");
-    overflow: hidden;
     position: relative;
   }
+
+.index-cover{
+  background-image: url("/static/images/background-index.png");
+  overflow: hidden;
+  position: relative;
+}
   
   .wrapper {
     min-height: 100vh;
@@ -46,16 +51,20 @@
   }
   
   .image {
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    border-radius: 5px 20px 5px;
+    background: #873232;
     width: auto;
     max-width: 100%;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   
   .hero-welcome-text > h1 {
     color: white;
     text-transform: uppercase;
     font-size: 27px;
-    margin-top: 80px;
+    margin-top: 130px;
   }
   
   .hero-welcome-bio {

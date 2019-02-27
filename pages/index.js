@@ -16,7 +16,7 @@ class Index extends React.Component {
     render() {
         const { isAuthenticated, user } = this.props.auth;
         return (
-            <BaseLayout className="cover" {...this.props.auth}>
+            <BaseLayout className="index-cover" {...this.props.auth} headerType="index">
                 <div className="main-section">
                     <div className="background-image">
                         <img src="/static/images/background-index.png" />
@@ -29,8 +29,7 @@ class Index extends React.Component {
                                         <div className="back">
                                             <div className="hero-section-content">
                                                 <div className="hero-section-content-intro">
-                                                    matan3sh@gmail.com
-                                                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                                                    
                                                 </div>
                                             </div>
                                             <img className="image" src="/static/images/section-1.png" />
@@ -45,7 +44,7 @@ class Index extends React.Component {
                                 <div className="hero-welcome-text">
                                     <h1>
                                         { isAuthenticated && <span> <b>{user.nickname}</b> </span> }
-                                        Welcome to the portfolio website of Filip Jerga.
+                                        Welcome to the portfolio website of Matan Shaviro.
                                         Get informed, collaborate and discover projects I was working on through the years!
                                     </h1>
                                 </div>

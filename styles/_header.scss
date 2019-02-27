@@ -1,6 +1,6 @@
 
   // HEADER
-  .port-navbar.port-default {
+  .port-navbar.port-nav-base {
     width: 100%;
     z-index: 15;
     padding: 28px;
@@ -27,13 +27,18 @@
         text-transform: uppercase;
   
         &.active {
-        color: #dba919;
+        color: #873232;
         }
   
         &:hover, &:focus {
-          color: #dba919;
+          color: #873232;
         }
       }
     }
+  }
+
+  .port-navbar.port-nav-base.port-nav-default {
+    padding: 30px;
+    background-color: $secondary !important;
   }
   

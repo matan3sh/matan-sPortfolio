@@ -3,12 +3,14 @@ import Cookies from 'js-cookie';
 import jwt from 'jsonwebtoken';
 import axios from 'axios';
 
+import { getCookieFromReq } from '../helpers/utils';
+
 class Auth0 {
 
   constructor() {
     this.auth0 = new auth0.WebAuth({
-        domain: 'matansh.auth0.com',
-        clientID: 'hlc2ER9yYUCoeQ8a9hL51ro7KxnhbgK3',
+        domain: 'matan3sh.auth0.com',
+        clientID: 'doC5bTxgZJwH4CbSpc40AKbxdlrgaJLz',
         redirectUri: 'http://localhost:3000/callback',
         responseType: 'token id_token',
         scope: 'openid profile'
@@ -50,7 +52,7 @@ class Auth0 {
 
     this.auth0.logout({
       returnTo: '',
-      clientID: 'hlc2ER9yYUCoeQ8a9hL51ro7KxnhbgK3'
+      clientID: 'doC5bTxgZJwH4CbSpc40AKbxdlrgaJLz'
     })
   }
 
@@ -59,7 +61,7 @@ class Auth0 {
   }
 
   async getJWKS() {
-    const res = await axios.get('https://matansh.auth0.com/.well-known/jwks.json');
+    const res = await axios.get('https://matan3sh.auth0.com/.well-known/jwks.json');
     const jwks = res.data;
     return jwks;
   }
@@ -101,11 +103,7 @@ class Auth0 {
   async serverAuth(req){
     if (req.headers.cookie) {
 
-      const tokenCookie = req.headers.cookie.split(';').find(c => c.trim().startsWith('jwt='));
-
-      if (!tokenCookie) { return undefined };
-
-      const token = tokenCookie.split('=')[1];
+      const token = getCookieFromReq(req, 'jwt');
       const verifiedToken = await this.verifyToken(token);
 
       return verifiedToken;
