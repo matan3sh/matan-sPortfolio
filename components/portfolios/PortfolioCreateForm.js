@@ -1,19 +1,17 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Button, FormGroup, Label } from 'reactstrap';
+import { Button } from 'reactstrap';
 import PortInput from '../form/PortInput';
+import PortDate from '../form/PortDate';
 
-const validateInputs = (validate) => {
+const validateInputs = (values) => {
     let errors = {};
 
-    // if (!values.email) {
-    //     errors.email = 'Required';
-    // } else if (
-    //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-    // ) {
-    //     errors.email = 'Invalid email address';
-    // }
-
+    Object.entries(values).forEach(([key, value]) => {
+        if (!values[key] && (values[key] === 'dateAdded')){
+            errors[key] = 'Field Is Required'
+        }
+    });
     return errors;
 }
 
@@ -21,19 +19,16 @@ const INITIAL_VALUES = { title: '',
                          type: '', 
                          programmingLanguage: '', 
                          database: '', 
-                         description: '' };
+                         description: '',
+                         videoURL: '',
+                         dateAdded: '' };
 
-const PortfolioCreateForm = () => (
+const PortfolioCreateForm = (props) => (
     <div>
         <Formik
             initialValues={INITIAL_VALUES}
             validate={validateInputs}
-            onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
-            }}
+            onSubmit={props.onSubmit}
         >
             {({ isSubmitting }) => (
                 <Form>
@@ -57,8 +52,15 @@ const PortfolioCreateForm = () => (
                                name="description" 
                                label="Description"
                                component={PortInput}/>
+                        <Field type="text" 
+                               name="videoURL" 
+                               label="Video URL"
+                               component={PortInput}/>
+                        <Field name="dateAdded" 
+                               label="Date Added"
+                               component={PortDate}/>
 
-                        <Button type="submit" disabled={isSubmitting}>
+                        <Button color="danger" size="lg" type="submit" disabled={isSubmitting}>
                             Add
                         </Button>
                 </Form>

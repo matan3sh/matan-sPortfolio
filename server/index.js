@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const mongoose = require('mongoose');
 const routes = require('../routes');
 
 // SERVICES
@@ -19,6 +20,10 @@ const secretData = [
         description: 'My Secret Passwords'
     }
 ]
+
+mongoose.connect('mongodb+srv://matan3sh:ma290190@portfolio-matan-dev-lhicm.mongodb.net/test?retryWrites=true', { useNewUrlParser: true })
+    .then(() => console.log('Database Connected'))
+    .catch(err => console.error(err));
 
 app.prepare()
     .then(() => {
