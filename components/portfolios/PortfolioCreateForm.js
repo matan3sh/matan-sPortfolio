@@ -16,20 +16,12 @@ const validateInputs = (values) => {
     return errors;
 }
 
-const INITIAL_VALUES = { title: '', 
-                         type: '', 
-                         programmingLanguage: '', 
-                         database: '', 
-                         description: '',
-                         videoURL: '',
-                         dateAdded: '' };
-
-const PortfolioCreateForm = (props) => (
+const PortfolioCreateForm = ({initialValues, onSubmit, error}) => (
     <div>
         <Formik
-            initialValues={INITIAL_VALUES}
+            initialValues={initialValues}
             validate={validateInputs}
-            onSubmit={props.onSubmit}
+            onSubmit={onSubmit}
         >
             {({ isSubmitting }) => (
                 <Form>
@@ -54,20 +46,37 @@ const PortfolioCreateForm = (props) => (
                                label="Description"
                                component={PortInput}/>
                         <Field type="text" 
+                               name="picture1" 
+                               label="Picture No.1"
+                               component={PortInput}/>
+                        <Field type="text" 
+                               name="picture2" 
+                               label="Picture No.2"
+                               component={PortInput}/>
+                        <Field type="text" 
+                               name="picture3" 
+                               label="Picture No.3"
+                               component={PortInput}/>
+                        <Field type="text" 
+                               name="picture4" 
+                               label="Picture No.4"
+                               component={PortInput}/>
+                        <Field type="text" 
                                name="videoURL" 
                                label="Video URL"
                                component={PortInput}/>
                         <Field name="dateAdded" 
                                label="Date Added"
+                               initialDate={initialValues.dateAdded}
                                component={PortDate}/>
 
-                        {   props.error &&
+                        {   error &&
                             <Alert color="danger">
-                                {props.error}
+                                {error}
                             </Alert>
                         }
 
-                        <Button color="danger" size="lg" type="submit" disabled={isSubmitting}>
+                        <Button color="success" size="lg" type="submit" disabled={isSubmitting}>
                             Add
                         </Button>
                 </Form>

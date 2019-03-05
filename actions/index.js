@@ -45,3 +45,23 @@ export const createPortfolio = async (portfolioData) => {
         .then(response => response.data)
         .catch(error => rejectPromise(error))
 }
+
+export const updatePortfolio = async (portfolioData) => {
+    return await axiosInstance.patch(`/portfolios/${portfolioData._id}`, portfolioData, setAuthHeader())
+        .then(response => response.data)
+        .catch(error => rejectPromise(error))
+}
+
+export const deletePortfolio = (portfolioId) => {
+    return axiosInstance.delete(`/portfolios/${portfolioId}`, setAuthHeader()).then(response => response.data);
+}
+
+// -------------- BLOG ACTIONS ---------------------------
+
+export const saveBlog = (blogData) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('promise resolved')
+        }, 1000)
+    })
+}

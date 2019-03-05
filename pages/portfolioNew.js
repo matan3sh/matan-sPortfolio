@@ -10,6 +10,18 @@ import { createPortfolio } from '../actions';
 import withAuth from '../components/hoc/withAuth';
 import { Router } from '../routes';
 
+const INITIAL_VALUES = { title: '', 
+                         type: '', 
+                         programmingLanguage: '', 
+                         database: '', 
+                         description: '',
+                         videoURL: '',
+                         picture1: '',
+                         picture2: '',
+                         picture3: '',
+                         picture4: '',
+                         dateAdded: '' };
+
 class PortfolioNew extends Component {
 
     constructor(props){
@@ -45,7 +57,9 @@ class PortfolioNew extends Component {
                 <BasePage className="portfolio-create-page" title="Add Project to Portfolio">
                 <Row>
                     <Col md="6">
-                        <PortfolioCreateForm error={error} onSubmit={this.savePortfolio}/>
+                        <PortfolioCreateForm initialValues={INITIAL_VALUES} 
+                                             error={error} 
+                                             onSubmit={this.savePortfolio}/>
                     </Col>
                 </Row>
                 </BasePage>

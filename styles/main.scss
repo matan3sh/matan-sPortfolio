@@ -4,9 +4,13 @@
 // PAGES
 @import './index';
 @import './portfolios';
+@import './blogs';
+@import '../node_modules/video-react/styles/scss/video-react.scss';
+@import '../node_modules/react-responsive-carousel/lib/styles/carousel.min.css';
 
 // COMPONENTS
 @import './header';
+@import './slate-editor';
 
 html, body {
     height:100%;
