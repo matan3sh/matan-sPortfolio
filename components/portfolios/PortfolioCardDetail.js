@@ -25,27 +25,27 @@ class PortfolioCardDetail extends React.Component {
             <p><b>Description: </b>{portfolio.description}</p>
             <p><b>Date Added: </b>{moment(portfolio.dateAdded).format('MMMM YYYY')}</p>
 
-            <Carousel src={portfolio.picture1}>
+            <Carousel>
               <div>
                 <img src={portfolio.picture1} />
                 <p className="legend">Legend 1</p>
               </div>
               <div>
-                <img src="http://www.notebookreview.com/wp-content/uploads/sites/2/MacBook-1-551x501.jpg" />
+                <img src={portfolio.picture2} />
                 <p className="legend">Legend 2</p>
               </div>
               <div>
-                <img src="http://www.notebookreview.com/wp-content/uploads/sites/2/MacBook-1-551x501.jpg" />
+                <img src={portfolio.picture3} />
                 <p className="legend">Legend 3</p>
               </div>
               <div>
-                <img src="http://www.notebookreview.com/wp-content/uploads/sites/2/MacBook-1-551x501.jpg" />
+                <img src={portfolio.picture4} />
                 <p className="legend">Legend 3</p>
               </div>
             </Carousel>
 
             <VideoPlayer src={portfolio.videoURL}/>
-                     
+
           </ModalBody>
           <ModalFooter>
             <Button color="secondary" onClick={toggle}>Close</Button>
