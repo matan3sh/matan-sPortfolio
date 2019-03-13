@@ -12,6 +12,7 @@ class About extends Component {
                     <Row className="mt-5">
                         <Col md="6">
                             <div className="left-side">
+                                <img className="profile-image fadein" src="/static/images/profile.png" />
                                 <h1 className="title fadein">Hello, Welcome</h1>
                                 <h4 className="subtitle fadein">To About Page</h4>
                                 <p className="subsubTitle fadein">Feel free to read short description about me.</p>

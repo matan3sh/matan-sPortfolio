@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHeader, CardBody, CardText, CardTitle, Button } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardText, CardTitle, CardImg, Button } from 'reactstrap';
 import PortfolioCardDetail from './PortfolioCardDetail';
 import { shortenText } from '../../helpers/utils';
 
@@ -32,6 +32,7 @@ export default class PortfolioCard extends React.Component {
                     <CardBody>
                         <p className="portfolio-card-city">{portfolio.programmingLanguage}</p>
                         <CardTitle className="portfolio-card-title">{portfolio.title}</CardTitle>
+                        <CardImg top style={{height: '150px'}} width="100%" src={portfolio.picture1} alt="Card image cap" />
                         <CardText className="portfolio-card-text">{shortenText(portfolio.description,96)}</CardText>
                         <div className="readMore">
                             {children}
