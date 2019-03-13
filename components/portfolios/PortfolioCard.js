@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardText, CardTitle, Button } from 'reactstrap';
 import PortfolioCardDetail from './PortfolioCardDetail';
+import { shortenText } from '../../helpers/utils';
+
 
 export default class PortfolioCard extends React.Component {
 
@@ -26,11 +28,11 @@ export default class PortfolioCard extends React.Component {
             <span onClick={this.handleToggel}>
                 <PortfolioCardDetail toggle={this.handleToggel} portfolio={portfolio} isOpen={isOpen}/>
                 <Card className="portfolio-card">
-                    <CardHeader className="portfolio-card-header">{portfolio.programmingLanguage}</CardHeader>
+                    <CardHeader className="portfolio-card-header">{portfolio.type}</CardHeader>
                     <CardBody>
-                        <p className="portfolio-card-city">{portfolio.type}</p>
+                        <p className="portfolio-card-city">{portfolio.programmingLanguage}</p>
                         <CardTitle className="portfolio-card-title">{portfolio.title}</CardTitle>
-                        <CardText className="portfolio-card-text">{portfolio.description}</CardText>
+                        <CardText className="portfolio-card-text">{shortenText(portfolio.description,96)}</CardText>
                         <div className="readMore">
                             {children}
                         </div>

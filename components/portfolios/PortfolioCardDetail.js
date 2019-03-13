@@ -28,19 +28,15 @@ class PortfolioCardDetail extends React.Component {
             <Carousel>
               <div>
                 <img src={portfolio.picture1} />
-                <p className="legend">Legend 1</p>
               </div>
               <div>
                 <img src={portfolio.picture2} />
-                <p className="legend">Legend 2</p>
               </div>
               <div>
                 <img src={portfolio.picture3} />
-                <p className="legend">Legend 3</p>
               </div>
               <div>
                 <img src={portfolio.picture4} />
-                <p className="legend">Legend 3</p>
               </div>
             </Carousel>
 
