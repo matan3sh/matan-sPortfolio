@@ -15,7 +15,7 @@ class Index extends React.Component {
             isFlipping:false
         }
 
-        this.roles = ['Developer', 'Tech Lover', 'Team Player', 'ReactJS'];
+        this.roles = ['Productive', 'Tech Lover', 'Team Player', 'Motivated', 'Fast Learner'];
     }
 
     componentDidMount() {
@@ -31,7 +31,7 @@ class Index extends React.Component {
             this.setState({
                 isFlipping: !this.state.isFlipping
             });
-        },30000)
+        },15000)
     }
 
     render() {
@@ -52,7 +52,7 @@ class Index extends React.Component {
                                             <div className="hero-section-content">
                                                 <h2>Software Enginner</h2>
                                                 <div className="hero-section-content-intro">
-                                                    Have a look at my portfolio and job history
+                                                    Have a look at my expirence , job history, read about me and get to know me better.
                                                 </div>
                                                 <div className="social-media">
                                                     <SocialIcon target="_blank" rel="noopener noreferrer" url="https://www.instagram.com/matan3sh/" />
@@ -62,7 +62,7 @@ class Index extends React.Component {
                                                     <SocialIcon target="_blank" rel="noopener noreferrer" url="https://www.linkedin.com/in/matan-shaviro-990b0272/" />
                                                 </div>
                                             </div>
-                                            <img className="image" src="/static/images/section-1.png" />
+                                            <img className="image" alt="Matan Shaviro Programming Welcome Picture" src="/static/images/section-1.png" />
                                             <div className="shadow-custom">
                                                 <div className="shadow-inner"> </div>
                                             </div>
@@ -71,10 +71,10 @@ class Index extends React.Component {
                                             <div className="hero-section-content">
                                                 <h2>My Desk Setup</h2>
                                                 <div className="hero-section-content-intro">
-                                                    Professional and top quality service in web development
+                                                    I believe in a clean and orderly work environment, which motivates me to work better, faster and more effectively.
                                                 </div>
                                             </div>
-                                            <img className="image" src="/static/images/section-2.png" />
+                                            <img className="image" alt="Matan Shaviro Programming Welcome Picture" src="/static/images/section-2.png" />
                                             <div className="shadow-custom">
                                                 <div className="shadow-inner"> </div>
                                             </div>
@@ -86,8 +86,8 @@ class Index extends React.Component {
                                 <div className="hero-welcome-text">
                                     <h1>
                                         { isAuthenticated && <span> <b>{user.nickname}</b> </span> }
-                                        Welcome to the portfolio website of Matan Shaviro.
-                                        Get informed, collaborate and discover projects I was working on through the years!
+                                        Welcome to my website.<br/>
+                                        Get informed, collaborate and discover more about me, see projects I was working on and much more!
                                     </h1>
                                 </div>
                                 <Typed
@@ -102,9 +102,9 @@ class Index extends React.Component {
                                     cursorChar="|"
                                 />
                                 <div className="hero-welcome-bio">
-                                    <h1>
-                                        Let's take a look on my work.
-                                    </h1>
+                                    <h2>
+                                        Have Fun ☺
+                                    </h2>
                                 </div>
                             </Col>
                         </Row>

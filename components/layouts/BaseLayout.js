@@ -3,7 +3,7 @@ import Header from '../shared/Header';
 import Head from 'next/head';
 
 const BaseLayout = (props) => {
-    const { className, children, isAuthenticated, user, isSiteOwner, title } = props;
+    const { className, children, isAuthenticated, user, isSiteOwner, title, cannonical } = props;
     const headerType = props.headerType || 'default';
 
     return (
@@ -24,6 +24,9 @@ const BaseLayout = (props) => {
                 <meta property="og:description" content="My name is Filip Jerga and I am an experienced software engineer and freelance developer. 
                 I have a Master's degree in Artificial Intelligence and several years of experience working on a wide range of technologies 
                 and projects from C++ development for ultrasound devices to modern mobile and web applications in React and Angular."/>
+
+                {cannonical && <link rel="cannonical" href={`http://localhost:3000${cannonical}`}/>}
+                <link rel="icon" type="image/ico" href="/static/favicon.ico"/>
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
             </Head>

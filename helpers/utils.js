@@ -10,7 +10,7 @@ export const getCookieFromReq = (req,cookieKey) => {
 
 export const shortenText = (text, maxLength) => {
     if (text && text.length > maxLength) {
-        return `${text.substring(0, maxLength)} ...Read More`;
+        return `${text.substring(0, maxLength)} ...`;
     }
 
     return text;
