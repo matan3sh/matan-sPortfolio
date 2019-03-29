@@ -86,7 +86,7 @@ class Index extends React.Component {
                                 <div className="hero-welcome-text">
                                     <h1>
                                         { isAuthenticated && <span> <b>{user.nickname}</b> </span> }
-                                        Welcome to my website.<br/>
+                                        Welcome<br/>
                                         Get informed, collaborate and discover more about me, see projects I was working on and much more!
                                     </h1>
                                 </div>

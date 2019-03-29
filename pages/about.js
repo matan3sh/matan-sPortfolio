@@ -14,23 +14,22 @@ class About extends Component {
                             <div className="left-side">
                                 <img className="profile-image fadein" src="/static/images/profile.png" />
                                 <h1 className="title fadein">Hello, Welcome</h1>
-                                <h4 className="subtitle fadein">To About Page</h4>
+                                <h4 className="subtitle fadein">To About Me Page</h4>
                                 <p className="subsubTitle fadein">Feel free to read short description about me.</p>
                             </div>
                         </Col>
                         <Col md="6">
                             <div className="fadein">
-                                <p>My name is Filip Jerga and I am an experienced software engineer and freelance developer. </p>
+                                <p>My name is Matan Shaviro I am 29 years old from Israel. </p>
                                 <p>
-                                    I have a Master's degree in Artificial Intelligence and several years of experience working
-                                    on a wide range of technologies and projects from C++ development for ultrasound devices to
-                                     modern mobile and web applications in React and Angular.
+                                    I have a Bachelor Degree in Software Engineering and during the studies I gained experience working
+                                    on a wide range of technologies and projects from C,C++,C#,Python. 
+                                    <br/>I'v done a seld study of Web Development like .Net, ReactJS, NextJS, VueJS framework 
+                                    and also Cross-Platform mobile apps using React Native.
                                 </p>
                                 <p>
-                                    Throughout my career, I have acquired advanced technical knowledge and the ability to explain
-                                    programming topics clearly and in detail to a broad audience. I invite you to take my course,
-                                    where I have put a lot of effort to explain web and software engineering concepts in a detailed,
-                                    hands-on and understandable way.
+                                    Throughout my working experience, I've always been on the technical side and I really love it.
+                                    I can testify to myself that I have a passion for high tech, an analytical mindset, and creative ability to pay attention to detail.
                                 </p>
                             </div>
                         </Col>
