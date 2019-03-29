@@ -1,4 +1,5 @@
 import React from 'react';
+import Typed from 'react-typed';
 
 import BaseLayout from '../components/layouts/BaseLayout';
 import { SocialIcon } from 'react-social-icons';
@@ -89,7 +90,17 @@ class Index extends React.Component {
                                         Get informed, collaborate and discover more about me, see projects I was working on and much more!
                                     </h1>
                                 </div>
-                                
+                                <Typed
+                                    loop
+                                    typeSpeed={60}
+                                    backSpeed={60}
+                                    strings={this.roles}
+                                    backDelay={1000}
+                                    loopCount={0}
+                                    showCursor
+                                    className="self-typed"
+                                    cursorChar="|"
+                                />
                                 <div className="hero-welcome-bio">
                                     <h2>
                                         Have Fun ☺
