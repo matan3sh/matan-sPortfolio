@@ -28,7 +28,7 @@ export default class MyApp extends App {
   }
 
   componentDidMount(){
-    Fonts();
+    // Fonts();
   }
 
   render () {

@@ -26,7 +26,7 @@ const BaseLayout = (props) => {
                 I have a Bachelor Degree in Software Engineering and during the studies 
                 I gained experience working on a wide range of technologies and projects from C,C++,C#,Python.
                 I'v done a seld study of Web Development like .Net, ReactJS, NextJS, VueJS framework and also Cross-Platform mobile apps using React Native."/>
-
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
                 {cannonical && <link rel="cannonical" href={`${process.env.BASE_URL}${cannonical}`}/>}
                 <link rel="icon" type="image/ico" href="/static/favicon.ico"/>
                 
